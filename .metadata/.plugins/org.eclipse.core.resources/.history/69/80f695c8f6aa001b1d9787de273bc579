@@ -1,0 +1,7 @@
+package com.mondrew.microservicios.app.cursos.services;
+
+import com.mondrew.microservicios.commons.services.CommonService;
+
+public interface CursoService extends CommonService<E> {
+
+}

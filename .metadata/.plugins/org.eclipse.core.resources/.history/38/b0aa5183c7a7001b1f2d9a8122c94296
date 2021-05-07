@@ -1,0 +1,16 @@
+package com.mondrew.microservicios.commons.services;
+
+import java.util.Optional;
+
+import com.mondrew.microservicios.app.usuarios.models.entity.Estudiante;
+
+public interface EstudianteService {
+
+	public Iterable<Estudiante> findAll();
+	
+	public Optional<Estudiante> findById(Long id);
+	
+	public Estudiante save(Estudiante estudiante);
+	
+	public void deleteById(Long id);
+}

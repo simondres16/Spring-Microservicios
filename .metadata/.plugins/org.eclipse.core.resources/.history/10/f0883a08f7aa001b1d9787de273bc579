@@ -1,0 +1,11 @@
+package com.mondrew.microservicios.app.cursos.services;
+
+import com.mondrew.microservicios.app.cursos.models.entity.Curso;
+import com.mondrew.microservicios.app.cursos.models.repository.CursoRepository;
+import com.mondrew.microservicios.commons.services.CommonServiceImpl;
+
+public class CursoServiceImpl extends CommonServiceImpl<Curso, CursoRepository> implements CursoService {
+
+	
+
+}
