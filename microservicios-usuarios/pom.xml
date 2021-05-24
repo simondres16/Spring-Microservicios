@@ -53,6 +53,11 @@
 			<artifactId>commoms-microservicios</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mondrew.microservicios.commons.estudiantes</groupId>
+			<artifactId>commons-estudiantes</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

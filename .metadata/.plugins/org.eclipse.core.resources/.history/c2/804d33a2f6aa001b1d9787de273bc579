@@ -1,5 +1,0 @@
-package com.mondrew.microservicios.app.cursos.models.repository;
-
-public interface CursoRepository {
-
-}
