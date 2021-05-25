@@ -84,7 +84,7 @@ public class Estudiante {
 			return true;
 		}
 		
-		if(obj instanceof Estudiante) {
+		if(!(obj instanceof Estudiante)) {
 			return false;
 		}
 		

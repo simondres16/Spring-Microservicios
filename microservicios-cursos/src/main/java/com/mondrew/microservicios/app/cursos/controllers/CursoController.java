@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ import com.mondrew.microservicios.commons.controllers.CommonController;
 import com.mondrew.microservicios.commons.estudiantes.models.entity.Estudiante;
 
 @RestController
-public class CursoController extends CommonController<Curso, CursoService> {
+public class CursoController extends CommonController<Curso, CursoService> {	
 
 	@PutMapping("/{id}")
 	public ResponseEntity<?> editar(@PathVariable Long id, @RequestBody Curso CursoBody) {
@@ -54,5 +55,10 @@ public class CursoController extends CommonController<Curso, CursoService> {
 		cursoBd.removeEstudiantes(estudiante);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(super.service.save(cursoBd));
+	}
+	
+	@GetMapping("/estudiante/{id}")
+	public ResponseEntity<?> buscarPorEstudianteId(@PathVariable Long id){
+		return ResponseEntity.ok(super.service.findCursoByEstudianteId(id));
 	}
 }
